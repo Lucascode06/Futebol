@@ -21,12 +21,6 @@ $busca = isset($_GET['busca']) ? $_GET['busca'] : '';
 </header>
 
 <div class="container">
-    <!-- Formulário de busca -->
-    <form method="GET" action="">
-        <input type="text" name="busca" placeholder="Buscar por nome, posição ou time" value="<?= htmlspecialchars($busca) ?>">
-        <button type="submit">Buscar</button>
-    </form>
-
     <!-- Formulário de cadastro -->
     <h2>Adicionar Novo Jogador</h2>
     <form method="POST" action="">
@@ -82,7 +76,7 @@ $busca = isset($_GET['busca']) ? $_GET['busca'] : '';
                   OR j.posicao LIKE '%$busca%' 
                   OR t.nome LIKE '%$busca%'";
     }
-
+    // Remover filtro de busca
     $sql .= " ORDER BY j.gols DESC";
 
     $result = $conn->query($sql);

@@ -1,7 +1,7 @@
 /* ===== Estilo Global ===== */
 body {
     font-family: Arial, sans-serif;
-    background: #111;
+    background: linear-gradient(135deg, #145a32 0%, #27ae60 100%);
     color: #fff;
     margin: 0;
     padding: 0;
@@ -9,16 +9,18 @@ body {
 
 /* ===== Cabeçalho ===== */
 header {
-    background: linear-gradient(to right, #d40000, #000);
+    background: linear-gradient(to right, #229954, #145a32);
     padding: 20px;
     text-align: center;
+    border-bottom: 5px solid #27ae60;
 }
 
 header h1 {
     margin: 0;
-    color: white;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-shadow: 2px 2px 8px #145a32;
 }
 
 /* ===== Container Principal ===== */
@@ -26,10 +28,10 @@ header h1 {
     width: 90%;
     max-width: 900px;
     margin: 20px auto;
-    background: #1a1a1a;
+    background: #1e5631;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(34, 153, 84, 0.4);
 }
 
 /* ===== Formulário ===== */
@@ -49,21 +51,24 @@ input, select, button {
 
 input, select {
     flex: 1;
-    background: #222;
-    color: white;
+    background: #145a32;
+    color: #fff;
+    border: 1px solid #229954;
 }
 
 /* ===== Botão ===== */
 button {
-    background: #d40000;
-    color: white;
+    background: #229954;
+    color: #fff;
     cursor: pointer;
     transition: 0.3s;
+    font-weight: bold;
+    box-shadow: 0 2px 8px #145a32;
 }
 
 button:hover {
-    background: black;
-    color: red;
+    background: #145a32;
+    color: #fff200;
 }
 
 /* ===== Tabela ===== */
@@ -71,34 +76,41 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 15px;
+    background: #145a32;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 th, td {
     padding: 12px;
-    border: 1px solid #333;
+    border: 1px solid #229954;
     text-align: center;
 }
 
 th {
-    background: #d40000;
-    color: white;
+    background: #229954;
+    color: #fff;
+    font-size: 1.1em;
+    letter-spacing: 1px;
 }
 
 tr:nth-child(even) {
-    background: #222;
+    background: #1e5631;
 }
 
 tr:nth-child(odd) {
-    background: #111;
+    background: #145a32;
 }
 
 /* ===== Links ===== */
 a {
-    color: #d40000;
+    color: #fff200;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.2s;
 }
 
 a:hover {
+    color: #229954;
     text-decoration: underline;
 }
