@@ -17,7 +17,7 @@ $busca = isset($_GET['busca']) ? $_GET['busca'] : '';
 </head>
 <body>
 <header>
-    <h1>Cadastro de Jogadores ⚽</h1>
+    <h1>Cadastro de Jogadores </h1>
 </header>
 
 <div class="container">
@@ -59,7 +59,7 @@ $busca = isset($_GET['busca']) ? $_GET['busca'] : '';
         $sql = "INSERT INTO jogadores (nome, posicao, numero, gols, time_id) 
                 VALUES ('$nome', '$posicao', $numero, $gols, $time_id)";
         if ($conn->query($sql) === TRUE) {
-            header("Location: index.php");
+            header("Location: dashboard.php");
             exit;
         } else {
             echo "<p style='color:red'>Erro: " . $conn->error . "</p>";

@@ -5,14 +5,15 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
 
-/* ===== Cabeçalho ===== */
 header {
     background: linear-gradient(to right, #229954, #145a32);
-    padding: 20px;
+    padding: 30px 0 10px 0;
     text-align: center;
     border-bottom: 5px solid #27ae60;
+    margin-bottom: 30px;
 }
 
 header h1 {
@@ -21,70 +22,95 @@ header h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 2px 2px 8px #145a32;
+    font-size: 2.2em;
 }
 
-/* ===== Container Principal ===== */
 .container {
-    width: 90%;
-    max-width: 900px;
-    margin: 20px auto;
+    width: 95%;
+    max-width: 1100px;
+    margin: 0 auto 30px auto;
     background: #1e5631;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(34, 153, 84, 0.4);
+    padding: 30px 30px 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(34, 153, 84, 0.4);
 }
 
-/* ===== Formulário ===== */
+h2 {
+    text-align: left;
+    color: #fff200;
+    margin-bottom: 18px;
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
 form {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 28px;
+    background: #229954;
+    padding: 18px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px #145a32;
 }
 
-input, select, button {
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
     padding: 10px;
-    border: none;
+    border: 1px solid #fff200;
     border-radius: 5px;
-    outline: none;
-}
-
-input, select {
-    flex: 1;
     background: #145a32;
     color: #fff;
-    border: 1px solid #229954;
+    font-size: 1em;
+    outline: none;
+    transition: border 0.2s;
+    flex: 1 1 180px;
 }
 
-/* ===== Botão ===== */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+select:focus {
+    border: 1.5px solid #fff200;
+}
+
 button {
-    background: #229954;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.3s;
+    background: #fff200;
+    color: #145a32;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 22px;
+    font-size: 1em;
     font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
     box-shadow: 0 2px 8px #145a32;
+    margin-left: 10px;
 }
 
 button:hover {
-    background: #145a32;
-    color: #fff200;
+    background: #229954;
+    color: #fff;
 }
 
 /* ===== Tabela ===== */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
+    margin-top: 18px;
     background: #145a32;
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 2px 12px #145a32;
 }
 
 th, td {
-    padding: 12px;
+    padding: 13px 10px;
     border: 1px solid #229954;
     text-align: center;
+    font-size: 1em;
 }
 
 th {
@@ -113,4 +139,12 @@ a {
 a:hover {
     color: #229954;
     text-decoration: underline;
+}
+
+/* ===== Mensagens de erro ===== */
+p[style*='color:red'] {
+    text-align: center;
+    color: #fff200 !important;
+    font-weight: bold;
+    margin-top: 10px;
 }
