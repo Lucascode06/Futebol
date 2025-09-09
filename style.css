@@ -1,0 +1,104 @@
+/* ===== Estilo Global ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Cabeçalho ===== */
+header {
+    background: linear-gradient(to right, #d40000, #000);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ===== Container Principal ===== */
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+/* ===== Formulário ===== */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+input, select {
+    flex: 1;
+    background: #222;
+    color: white;
+}
+
+/* ===== Botão ===== */
+button {
+    background: #d40000;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: black;
+    color: red;
+}
+
+/* ===== Tabela ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+th {
+    background: #d40000;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #222;
+}
+
+tr:nth-child(odd) {
+    background: #111;
+}
+
+/* ===== Links ===== */
+a {
+    color: #d40000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
